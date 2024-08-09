@@ -14,10 +14,6 @@ project "Client"
 		"src/**.c",
 		"src/**.hpp",
 		"src/**.cpp",
-		"../common/src/**.c",
-		"../common/src/**.h",
-		"../common/src/**.cpp",
-		"../common/src/**.hpp",
 	}
 
 	includedirs
@@ -33,6 +29,7 @@ project "Client"
 
 	links
 	{
+		"Common",
 		"glad",
 		"glfw",
 		--"ImGui"

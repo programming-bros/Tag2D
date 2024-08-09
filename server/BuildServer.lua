@@ -13,11 +13,7 @@ project "Server"
 		"src/**.h",
 		"src/**.c",
 		"src/**.hpp",
-		"src/**.cpp",
-		"../common/src/**.c",
-		"../common/src/**.h",
-		"../common/src/**.cpp",
-		"../common/src/**.hpp",
+		"src/**.cpp"
 	}
 
 	includedirs
@@ -30,6 +26,7 @@ project "Server"
 
 	links
 	{
+		"Common"
 	}
 
 	postbuildcommands
@@ -92,16 +89,6 @@ project "Server"
 
 		links
 		{
-			--"GL",
-			--"X11",
-			--"Xi",
-			--"Xrandr",
-			--"Xxf86vm",
-			--"Xinerama",
-			--"Xcursor",
-			--"rt",
-			--"m",
-			--"pthread"
 		}
 
 		defines
