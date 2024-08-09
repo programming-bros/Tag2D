@@ -7,14 +7,15 @@
 #include <string>
 #include <iostream>
 
-#if defined(_WIN32) || defined(_WIN64) || defined(__CYGWIN__)
+#include "pc.h"
+
+
+#ifdef WINDOWS
 	#include <conio.h>
-	#define PLATFORM Windows
-#elif defined(__linux__) || defined(__APPLE__)
+#elif defined(LINUX) || defined(APPLE)
 	#include <ncurses.h>
-	#define PLATFORM Unix
 #else
-	#define PLATFORM NA
+	#error Unsupported platform
 #endif
 
 #define ENTER_KEY_CODE 13

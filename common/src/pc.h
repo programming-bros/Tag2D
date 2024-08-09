@@ -18,10 +18,7 @@
 #elif __linux__
 #define LINUX
 
-#elif __APPLE__
-#define APPLE
-
-#endif // __APPLE__
+#endif // __linux__
 
 #define ASSERT(bool_value, text) ( bool_value && std::cout << "[Error Occured] ASSERTION: " << text  << "\n")
 
